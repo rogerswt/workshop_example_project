@@ -55,6 +55,10 @@ cat("Number of events in the gated file:", n_events, "\n")
 # source("./example_utils.R")   #usually put this at the top of the script
 # ff_lymph = gate_lymph(fframe = ff)
 
+# # count the events in the gated flowFrame and print out
+# n_events = nrow(ff_lymph)
+# cat("Number of events in the gated file:", n_events, "\n")
+
 # # experiment with the function's parameters
 # ff_lymph_1 = gate_lymph(fframe = ff, height = 0.7)
 # ff_lymph_2 = gate_lymph(fframe = ff, thresh_debris_fsc = .5)
