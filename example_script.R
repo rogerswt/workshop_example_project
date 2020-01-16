@@ -17,7 +17,7 @@ ff = get_sample(filename)
 
 # count the events in the flowFrame and print out
 n_events = nrow(ff)
-cat("Number of events:", n_events)
+cat("Number of events in the original file:", n_events, "\n")
 
 # make a picture
 pplot(ff, c("FSC-A","SSC-A"), tx = 'linear', ty = 'linear')
@@ -46,9 +46,13 @@ ff_lymph = Subset(ff, pg)
 
 # count the events in the gated flowFrame and print out
 n_events = nrow(ff_lymph)
-cat("Number of events:", n_events)
+cat("Number of events in the gated file:", n_events, "\n")
 
-# # FUNCTION: gate lymphocytes
+################################################################################
+# # Create a FUNCTION to gate lymphocytes
+################################################################################
+
+# source("./example_utils.R")   #usually put this at the top of the script
 # ff_lymph = gate_lymph(fframe = ff)
 
 # # experiment with the function's parameters
